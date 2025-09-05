@@ -27,6 +27,7 @@ app.use(
     allowedHeaders: ["Content-Type", "Authorization"]
   })
 );
+app.options("*", cors()); // 👈 handles preflight requests
 app.use(express.json());
 app.use(morgan("dev"));
 
